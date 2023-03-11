@@ -49,7 +49,7 @@ int main() {
     list.insertar(3);
     list.insertar(2);
     list.insertar(1);
-    list.insertar(4);
+    list.insertar(0);
     list.print();
     return 0;
 }
