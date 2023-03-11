@@ -2,6 +2,19 @@
 
 using namespace std;
 
+void * operator new(size_t size)
+{
+    cout << "New operator overloading " << endl;
+    void * p = malloc(size);
+    return p;
+}
+ 
+void operator delete(void * p)
+{
+    cout << "Delete operator overloading " << endl;
+    free(p);
+}
+
 class Node{
 
 public:
@@ -36,20 +49,32 @@ public:
         while (nodo_actual != nullptr ){
             cout<< nodo_actual->dato<<" ";
             nodo_actual = nodo_actual->siguiente;
+            
 
         }
         std::cout<<std::endl;
+        
     }
+
+
+    
 
 };
 
 
 int main() {
+
+    //int * p = new list();
+    
     ListaEnlazada list;
     list.insertar(3);
     list.insertar(2);
     list.insertar(1);
-    list.insertar(0);
+    list.insertar(4);
     list.print();
+   
     return 0;
 }
+
+
+    //return nullptr;
