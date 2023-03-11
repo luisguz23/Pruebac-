@@ -40,7 +40,7 @@ int main() {
     lista.insertarAlInicio(4);
     lista.insertarAlInicio(3);
     lista.insertarAlInicio(2);
-    lista.insertarAlInicio(1);
+    lista.insertarAlInicio(2);
 
     // Imprimir los valores de la lista
     Node* actual = lista.consultarInicio();
